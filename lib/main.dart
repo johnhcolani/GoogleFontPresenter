@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData myTheme = ThemeData(
-      primarySwatch: Colors.lime, // Set the primary color for the app
+      primarySwatch: Colors.indigo, // Set the primary color for the app
       accentColor: Colors.orange, // Set the accent color for the app
       // Add more color values as needed
     );

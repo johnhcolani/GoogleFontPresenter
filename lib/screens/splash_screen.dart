@@ -1,8 +1,9 @@
+import 'package:animated_widgets/widgets/scale_animated.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:sizer/sizer.dart';
 
-import '../main_page.dart';
+import 'main_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  final bool _enabled = true;
   @override
   void initState() {
     super.initState();
@@ -21,19 +23,29 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
-      body: Stack(
-        children:[ Center(
-          child: SizedBox(
-              height: 60.w,
-              width: 60.w,
-              child: Image.asset('assets/images/Google-Fonts-Logo.png'),
-            ),),]
-      ),
-
-
-      );
-
+        backgroundColor: Colors.white,
+        body: Shimmer(
+          colorOpacity: 0.9,
+          child: Center(
+            child: ScaleAnimatedWidget.tween(
+              enabled: _enabled,
+              duration: const Duration(milliseconds: 600),
+              scaleDisabled: 0.3,
+              scaleEnabled: 1,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                Center(
+                  child: SizedBox(
+                    height: 70.w,
+                    width: 70.w,
+                    child: Image.asset('assets/images/Google-Fonts-Logo.png'),
+                  ),
+                ),
+              ]),
+            ),
+          ),
+        ));
   }
 
   void _handleSplash() async {

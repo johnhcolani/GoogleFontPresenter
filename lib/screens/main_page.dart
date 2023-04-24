@@ -29,7 +29,12 @@ class _MainPageState extends State<MainPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(height: 10.h,),
-          Text('Google Fonts\nPresentation\nfor\nfellow\nFlutter\nDeveloper',
+          Container(
+            height: 5.h,
+              child: Image.asset('assets/images/Google_Fonts_logo.svg.png')),
+
+          SizedBox(height: 1.h,),
+          Text('Presentation\nfor\nfellow\nFlutter\nDeveloper',
             textAlign: TextAlign.center, style: GoogleFonts.aboreto(
                 fontSize: 24, fontWeight: FontWeight.bold
             ),),
@@ -43,10 +48,13 @@ class _MainPageState extends State<MainPage> {
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AllGoogleFontsList()));
-//AllGoogleFontsList
+
                 },
-                child: const Text('START', style: TextStyle(
-                    fontSize: 24, fontWeight: FontWeight.bold),)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text('SHOW FONTS', style: TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.bold),),
+                )),
           ),
 
           TextButton(
