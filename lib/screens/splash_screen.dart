@@ -2,11 +2,13 @@ import 'package:animated_widgets/widgets/scale_animated.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:sizer/sizer.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import 'main_page.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+
+  const SplashPage({Key? key,}) : super(key: key);
 
   @override
   State<SplashPage> createState() => _SplashPageState();
@@ -39,7 +41,7 @@ class _SplashPageState extends State<SplashPage> {
                   child: SizedBox(
                     height: 70.w,
                     width: 70.w,
-                    child: Image.asset('assets/images/Google-Fonts-Logo.png'),
+                    child: Image.asset('assets/images/newLogo.png'),
                   ),
                 ),
               ]),
@@ -51,6 +53,6 @@ class _SplashPageState extends State<SplashPage> {
   void _handleSplash() async {
     await Future.delayed(const Duration(seconds: 2));
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const MainPage()));
+        context, MaterialPageRoute(builder: (context) => MainPage()));
   }
 }

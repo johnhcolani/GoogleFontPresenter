@@ -40,6 +40,7 @@ dependencies:
   url_launcher: ^6.1.10
   shimmer_animation: ^2.1.0
   animated_widgets: ^1.1.0
+  webview_flutter:
 
 dev_dependencies:
 

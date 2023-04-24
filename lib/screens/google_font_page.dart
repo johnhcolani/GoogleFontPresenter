@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:googl_font_presentation/screens/info_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class AllGoogleFontsList extends StatefulWidget {
+
+
   @override
   State<AllGoogleFontsList> createState() => _AllGoogleFontsListState();
 }
@@ -80,7 +84,7 @@ class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
-                        color: Colors.grey.shade200,
+                        color: Colors.indigo.shade50,
                         elevation: 1,
                         child: ListTile(
                           title: Column(
@@ -112,35 +116,28 @@ class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
       ),
       bottomNavigationBar: BottomAppBar(
 
-        padding: EdgeInsets.only(bottom: 3.h),
+        padding: EdgeInsets.only(bottom: 2.h),
         color: Colors.indigo,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-
-            Text('Total: ${allFonts.length}',style: TextStyle(color: Colors.white),),
-            // IconButton(
-            //   icon: Icon(Icons.home),
-            //   onPressed: () {
-            //     // Handle home icon onPressed event
-            //   },
-            // ),
-            // IconButton(
-            //   icon: Icon(Icons.settings),
-            //   onPressed: () {
-            //     // Handle settings icon onPressed event
-            //   },
-            // ),
-            // IconButton(
-            //   icon: Icon(Icons.account_circle),
-            //   onPressed: () {
-            //     // Handle account icon onPressed event
-            //   },
-            // ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: Text('Total Fonts: ${allFonts.length}',textAlign:TextAlign.center,style: GoogleFonts.genos(
+                color: Colors.white,fontSize: 24.0),
+              )),
+            Padding(
+              padding: const EdgeInsets.only(top: 14.0),
+              child: IconButton(
+               onPressed: () {
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>InfoPage()));
+               },
+                icon: Icon(Icons.info_outline,size: 6.w,),color: Colors.white,),
+            )
           ],
         ),
-      ),
+        ),
+
     );
   }
 }

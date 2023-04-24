@@ -34,14 +34,14 @@ class _MainPageState extends State<MainPage> {
               child: Image.asset('assets/images/Google_Fonts_logo.svg.png')),
 
           SizedBox(height: 1.h,),
-          Text('Presentation\nfor\nfellow\nFlutter\nDeveloper',
-            textAlign: TextAlign.center, style: GoogleFonts.aboreto(
+          Text('Presentation\nfor\nfellow Flutter Developer',
+            textAlign: TextAlign.center, style: GoogleFonts.genos(
                 fontSize: 24, fontWeight: FontWeight.bold
             ),),
           SizedBox(height: 5.h,),
           SizedBox(
               height: 40.w,
-              width: 40.w,
+              width: 20.w,
               child: Image.asset('assets/images/icons8-flutter-480.png')),
           Padding(
             padding: EdgeInsets.only(top: 20.h,left: 16.0, right: 16.0),
@@ -50,10 +50,10 @@ class _MainPageState extends State<MainPage> {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AllGoogleFontsList()));
 
                 },
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: const Text('SHOW FONTS', style: TextStyle(
-                      fontSize: 24, fontWeight: FontWeight.bold),),
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 12.0,bottom: 12.0),
+                  child: Text('SHOW FONTS', style: TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.normal),),
                 )),
           ),
 
