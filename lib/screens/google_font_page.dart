@@ -69,7 +69,7 @@ class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
                             onPressed:(){
                               smaller();
                             },
-                            icon: const Icon(Icons.remove)),
+                            icon: Icon(Icons.remove,size: 8.w,)),
                         IconButton(
                             onPressed:(){
                               larger();
