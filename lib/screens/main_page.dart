@@ -25,35 +25,35 @@ class _MainPageState extends State<MainPage> {
     child:Scaffold(
 
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(height: 10.h,),
+         // SizedBox(height: 10.h,),
           Container(
             height: 5.h,
               child: Image.asset('assets/images/Google_Fonts_logo.svg.png')),
 
-          SizedBox(height: 1.h,),
+         // SizedBox(height: 1.h,),
           Text('Presentation\nfor\nfellow Flutter Developer',
             textAlign: TextAlign.center, style: GoogleFonts.genos(
                 fontSize: 24, fontWeight: FontWeight.bold
             ),),
-          SizedBox(height: 5.h,),
+         // SizedBox(height: 5.h,),
           SizedBox(
-              height: 40.w,
-              width: 20.w,
+              height: 30.w,
+              width: 30.w,
               child: Image.asset('assets/images/icons8-flutter-480.png')),
           Padding(
-            padding: EdgeInsets.only(top: 20.h,left: 16.0, right: 16.0),
+            padding: EdgeInsets.only(top: 8.h,left: 16.0, right: 16.0),
             child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AllGoogleFontsList()));
 
                 },
-                child: const Padding(
+                child:  Padding(
                   padding: EdgeInsets.only(top: 12.0,bottom: 12.0),
                   child: Text('SHOW FONTS', style: TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.normal),),
+                      fontSize: 10.sp, fontWeight: FontWeight.normal),),
                 )),
           ),
 

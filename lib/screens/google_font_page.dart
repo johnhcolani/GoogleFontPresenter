@@ -14,6 +14,7 @@ class AllGoogleFontsList extends StatefulWidget {
 class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
   ScrollController _scrollController = ScrollController();
   String _searchQuery = ''; // Search query
+  double _fontSize = 16.sp;
   List<String> allFonts =
       GoogleFonts.asMap().keys.toList(); // List of all available font families
 
@@ -61,7 +62,21 @@ class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
                             borderSide: const BorderSide(color: Colors.indigo)),
                       ),
                     ),
-
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                            onPressed:(){
+                              smaller();
+                            },
+                            icon: Icon(Icons.remove,size: 8.w,)),
+                        IconButton(
+                            onPressed:(){
+                              larger();
+                            },
+                            icon:  Icon(Icons.add,size: 8.w,)),
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -86,24 +101,32 @@ class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
                       child: Card(
                         color: Colors.indigo.shade50,
                         elevation: 1,
-                        child: ListTile(
-                          title: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Google Family',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.getFont(fontFamily,
-                                    fontSize: 16.sp),
+                        child: Row(
+                          children: [
+
+                            Expanded(
+                              child: ListTile(
+                                title: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Google Family',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.getFont(fontFamily,
+                                          fontSize: 16.sp),
+                                    ),
+                                    Text(
+                                      fontFamily,
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.getFont(fontFamily,
+                                          fontSize: _fontSize),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              Text(
-                                fontFamily,
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.getFont(fontFamily,
-                                    fontSize: 24.sp),
-                              ),
-                            ],
-                          ),
+                            ),
+
+                          ],
                         ),
                       ),
                     );
@@ -140,8 +163,19 @@ class _AllGoogleFontsListState extends State<AllGoogleFontsList> {
 
     );
   }
-}
+  void larger(){
+    setState(() {
+      _fontSize++;
+    });
 
+  }
+  void smaller(){
+    setState(() {
+      _fontSize--;
+    });
+
+  }
+}
 // Container(
 // padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 8),
 // child: TextField(
