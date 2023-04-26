@@ -44,7 +44,13 @@ class _WebViewAppState extends State<WebViewApp> {
     return Stack(
       children: [
         Scaffold(
-          appBar: AppBar(),
+
+          appBar: AppBar(
+            backgroundColor: const Color(0xCB0A202D),
+            iconTheme: const IconThemeData(
+              color: Colors.white, //change your color here
+            ),
+          ),
           body: WebViewWidget(
             controller: controller,
           ),

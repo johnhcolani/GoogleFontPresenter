@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:googl_font_presentation/screens/splash_screen.dart';
 import 'package:sizer/sizer.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
+  runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     final ThemeData myTheme = ThemeData(
-      primarySwatch: Colors.indigo, // Set the primary color for the app
-      accentColor: Colors.orange, // Set the accent color for the app
+      primarySwatch: Colors.grey, // Set the primary color for the app
+      //accentColor: Colors.orange, // Set the accent color for the app
       // Add more color values as needed
     );
     return Sizer(
