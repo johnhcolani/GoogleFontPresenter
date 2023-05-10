@@ -1,9 +1,10 @@
 import 'package:animated_widgets/widgets/scale_animated.dart';
 import 'package:flutter/material.dart';
 import 'package:googl_font_presentation/screens/background.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:sizer/sizer.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+
 
 import 'main_page.dart';
 
@@ -31,21 +32,29 @@ class _SplashPageState extends State<SplashPage> {
         Scaffold(
             backgroundColor: Colors.blue.withOpacity(0.4),
           body: Shimmer(
-            colorOpacity: 0.9,
+            colorOpacity: 0.2,
             child: Center(
               child: ScaleAnimatedWidget.tween(
                 enabled: _enabled,
-                duration: const Duration(milliseconds: 600),
-                scaleDisabled: 0.3,
-                scaleEnabled: 1,
+                duration: const Duration(milliseconds: 500),
+                scaleDisabled: 0.2,
+                scaleEnabled: 0.7,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                   Center(
-                    child: SizedBox(
-                      height: 70.w,
-                      width: 70.w,
-                      child: Image.asset('assets/images/newLogo.png'),
+                    child:
+                    SizedBox(
+                      height: 110.w,
+                      width: 110.w,
+                      child: Text(
+                          'Google\nFonts',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.asset(
+                            fontSize: 30.sp, fontWeight: FontWeight.bold,color: const Color(
+                              0xf5de9c0c),
+                          )
+                      ),
                     ),
                   ),
                 ]),

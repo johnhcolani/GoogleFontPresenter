@@ -34,32 +34,38 @@ class _MainPageState extends State<MainPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  // SizedBox(height: 10.h,),
-                  Container(
-                      height: 5.h,
-                      child: Image.asset(
-                          'assets/images/Google_Fonts_logo.svg.png')),
 
+                children: [
+                Text(
+                'Google\nFonts',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.asset(
+                    fontSize: 30.sp, fontWeight: FontWeight.bold,color: const Color(
+                    0xf5de9c0c),
+                )
+                ),
                   SizedBox(
-                    height: 1.h,
+                    height: 10.h,
                   ),
+
+
+
                   Text(
                     'Presentation\nfor\nfellow Flutter Developer',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.genos(
                         fontSize: 20.sp, fontWeight: FontWeight.bold,color: const Color(
-                        0xf5182f3d)),
+                        0xf5b8c7d0)),
                   ),
-                  // SizedBox(height: 5.h,),
+                   SizedBox(height: 2.h,),
                   SizedBox(
-                      height: 30.w,
+                      height: 40.w,
                       width: 30.w,
                       child:
                           Opacity(
-                              opacity: 0.4,child: Image.asset('assets/images/icons8-flutter-480.png'))),
+                              opacity: 0.6,child: Image.asset('assets/images/icons8-flutter-480.png'))),
                   Padding(
-                    padding: EdgeInsets.only(top: 38.h, left: 4.w, right: 4.w),
+                    padding: EdgeInsets.only(top: 10.h, left: 4.w, right: 4.w),
                     child: ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(const Color(
@@ -70,6 +76,9 @@ class _MainPageState extends State<MainPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => AllGoogleFontsList()));
+                          setState(() {
+
+                          });
                         },
                         child: Padding(
                           padding: EdgeInsets.only(top: 2.h, bottom: 2.h),
@@ -90,7 +99,7 @@ class _MainPageState extends State<MainPage> {
                         style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 16.sp,
-                            fontWeight: FontWeight.bold,color: Colors.blue.shade100),
+                            fontWeight: FontWeight.bold,color: const Color(0xf5de9c0c)),
                       ))
                 ],
               ),

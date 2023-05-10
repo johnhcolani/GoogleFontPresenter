@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:googl_font_presentation/screens/web_view_stack.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+
 
 import 'google_font_page.dart';
 
@@ -20,17 +20,17 @@ class _InfoPageState extends State<InfoPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: const Color(0xEAB7C5CE),
+      backgroundColor: Color(0xCBC1CFD7),
       appBar: AppBar(
         iconTheme: const IconThemeData(
           color: Colors.white, //change your color here
         ),
-        backgroundColor: const Color(0xCB182F3D),
-        title: const Text('GoogleFont Application info',style: TextStyle(color: Colors.white60),),
+        backgroundColor: Color(0xCB0A202D),
+        title: const Text('GoogleFont Application info',style: TextStyle(color: Colors.white),),
       ),
       bottomNavigationBar: BottomAppBar(
         padding: EdgeInsets.only(bottom: 3.h),
-        color: const Color(0xCB182F3D),
+        color: Color(0xCB0A202D),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -58,7 +58,7 @@ class _InfoPageState extends State<InfoPage> {
                 style: GoogleFonts.merriweatherSans(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
-                  color: const Color(0xCB053F6E),
+                  color: Color(0xCB022D46),
                 ),
               ),
               const SizedBox(height: 8.0),
@@ -73,7 +73,7 @@ class _InfoPageState extends State<InfoPage> {
                 '1. Install the GoogleFont Package:',
                 style: GoogleFonts.merriweatherSans(
                   fontSize: 16.0,
-                  color: const Color(0xCB053F6E),
+                  color: Color(0xCB022D46),
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -93,7 +93,7 @@ class _InfoPageState extends State<InfoPage> {
                   'dependencies:\n  google_fonts: ^2.1.0',
                   style: GoogleFonts.adventPro(
                     fontSize: 14.0,
-                    color: Colors.green
+                    color: Color(0xFFB5E7B9),
                   ),
                 ),
               ),
@@ -103,7 +103,7 @@ class _InfoPageState extends State<InfoPage> {
                 style: GoogleFonts.merriweatherSans(
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold,
-                    color: const Color(0xCB053F6E),
+                    color: Color(0xCB022D46),
                 ),
               ),
               const SizedBox(height: 4.0),
@@ -123,7 +123,7 @@ class _InfoPageState extends State<InfoPage> {
                   'import \'package:google_fonts/google_fonts.dart\';',
                   style: GoogleFonts.adventPro(
                     fontSize: 14.0,
-                      color: Colors.green
+                      color: Color(0xFFB5E7B9),
                   ),
                 ),
               ),
@@ -140,7 +140,7 @@ class _InfoPageState extends State<InfoPage> {
                 '3. Use the Font in Your Flutter App:',
                 style: GoogleFonts.merriweatherSans(
                   fontWeight: FontWeight.bold,
-                    color: const Color(0xCB053F6E),
+                    color: Color(0xCB022D46),
                 ),
               ),
               const SizedBox(height: 4.0),
@@ -159,53 +159,13 @@ class _InfoPageState extends State<InfoPage> {
                   'Text(\'Hello\', style: GoogleFonts.yourSelectedFontStyle(fontSize: 18.0))',
                   style: GoogleFonts.adventPro(
                     fontSize: 14.0,
-                      color: Colors.green
+                      color: Color(0xFFB5E7B9),
                   ),
                 ),
               ),
-              const SizedBox(height: 8.0),
-              Text(
-                '4. Buy Me a Coffee:',
-                style: GoogleFonts.merriweatherSans(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
-                    color: const Color(0xCB053F6E),
-                ),
-              ),
-              const SizedBox(height: 4.0),
-              Text(
-                'If you find the GoogleFont Application helpful in your Flutter development journey, consider buying me a coffee to support further development and maintenance of the app. Your support is greatly appreciated!',
-                style: GoogleFonts.roboto(
-                  fontSize: 16.0,
-                ),
-              ),
+
+
               const SizedBox(height: 16.0),
-              Padding(
-                padding: EdgeInsets.only(top: 4.h,left: 16.0, right: 16.0),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(const Color(0xCB182F3D),),
-
-                  ),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const WebViewApp()));
-
-                    },
-                    child:  Center(
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 12.0,bottom: 12.0),
-                        child: Text(
-                          'Buy Me a Coffee',
-                          style: GoogleFonts.adventPro(
-                            fontSize: 18.0,color: Colors.white60,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                    )),
-
-
             ],
           ),
         ),
