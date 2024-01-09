@@ -1,12 +1,10 @@
 # googl_font_presentation
 
-A new Flutter project.
+# For App developer to see all fonts in screen
 
 ## Getting Started
+<img width="241" alt="image" src="https://github.com/johnhcolani/GoogleFontPresenter/assets/91166301/45c7005e-83a4-4ecc-9c16-01dc042cebd4">
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
